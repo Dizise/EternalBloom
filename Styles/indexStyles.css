@@ -442,7 +442,44 @@ body {
 @media (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
-        padding: 10px 20px;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .nav-left {
+        gap: 12px;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        font-size: 13px;
+        margin: 0 8px;
+    }
+
+    .nav-branding {
+        order: 1;
+        flex: none;
+        width: 100%;
+    }
+
+    .brand-name {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .nav-right {
+        order: 2;
+        gap: 10px;
+    }
+
+    .logo {
+        height: 35px;
+    }
+
+    .instagram-icon {
+        height: 20px;
     }
 
     .hero {

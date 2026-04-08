@@ -441,37 +441,39 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
     .navbar {
-        flex-wrap: wrap;
+        flex-direction: column;
         padding: 10px 15px;
-        gap: 10px;
+        gap: 12px;
     }
 
     .nav-left {
-        gap: 12px;
-        order: 3;
+        gap: 15px;
+        order: 2;
         width: 100%;
         justify-content: center;
+        padding-bottom: 10px;
     }
 
     .nav-btn {
-        font-size: 13px;
-        margin: 0 8px;
+        font-size: 14px;
+        margin: 0;
     }
 
     .nav-branding {
         order: 1;
         flex: none;
-        width: 100%;
+        width: auto;
     }
 
     .brand-name {
         font-size: 18px;
         letter-spacing: 1px;
+        white-space: nowrap;
     }
 
     .nav-right {
-        order: 2;
-        gap: 10px;
+        order: 1;
+        gap: 8px;
     }
 
     .logo {

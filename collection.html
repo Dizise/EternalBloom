@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collection - Eternal Bloom</title>
+    <link rel="icon" href="Images/logo eternal bloom.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Styles/collectionStyles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Eternal Bloom</h1>
+      <nav>
+        <a href="/" style="color:#6b5b95; text-decoration:none; font-weight:600">Home</a>
+      </nav>
+    </header>
+    <main>
+      <section class="page-intro">
+        <div>
+          <h2>Custom Flower Collection</h2>
+          <p>
+            Discover our special arrangements and create the perfect surprise. Choose colors, messages, decorations, and add-ons to make your bouquet uniquely yours.
+          </p>
+        </div>
+      </section>
+      <section class="content">
+        <div class="details">
+          <h2>Customize your bouquet</h2>
+          <div class="selector">
+            <label for="phrase-select">Choose a message</label>
+            <select id="phrase-select" style="width:100%; padding:12px; border-radius:12px; border:1px solid #ddd;">
+              <option value="no-message">No message</option>
+              <option value="will-you-be-my-girlfriend">Will you be my girlfriend?</option>
+              <option value="happy-birthday">Happy birthday</option>
+              <option value="i-love-you">I love you</option>
+              <option value="thank-you-for-your-love">Thank you for your love</option>
+              <option value="you-are-my-inspiration">You are my inspiration</option>
+              <option value="custom-message">Custom message</option>
+            </select>
+            <div id="customPhraseContainer" style="display:none; margin-top: 16px;">
+              <label for="custom-phrase" style="display:block; margin-bottom:8px; font-weight:600;">Enter your message</label>
+              <input id="custom-phrase" type="text" placeholder="Type your message here" style="width:100%; padding:12px; border-radius:12px; border:1px solid #ddd;" />
+            </div>
+          </div>
+          <div class="selector">
+            <label for="quantity-select">Number of roses</label>
+            <select id="quantity-select" style="width:100%; padding:12px; border-radius:12px; border:1px solid #ddd;">
+              <option value="6">6 roses</option>
+              <option value="9">9 roses</option>
+              <option value="12">12 roses</option>
+              <option value="15">15 roses</option>
+              <option value="18">18 roses</option>
+              <option value="21">21 roses</option>
+              <option value="24">24 roses</option>
+            </select>
+          </div>
+          <div class="selector">
+            <label>Available colors</label>
+            <div class="colors">
+              <div class="color-box" data-color="crema" title="Cream"></div>
+              <div class="color-box" data-color="morado" title="Purple"></div>
+              <div class="color-box" data-color="rosado" title="Pink"></div>
+              <div class="color-box" data-color="rojo" title="Red"></div>
+              <div class="color-box" data-color="blanco" title="White"></div>
+              <div class="color-box" data-color="amarillo" title="Yellow"></div>
+              <div class="color-box" data-color="azul-celeste" title="Blue and sky blue"></div>
+            </div>
+          </div>
+          <div class="selector">
+            <label>Decorations</label>
+            <ul class="checkbox-list">
+              <li class="checkbox-item"><input type="checkbox" id="dec-mariposas" class="decoration-checkbox" /><label for="dec-mariposas">Butterflies</label></li>
+              <li class="checkbox-item"><input type="checkbox" id="dec-detalles" class="decoration-checkbox" /><label for="dec-detalles">Sparkly details</label></li>
+              <li class="checkbox-item"><input type="checkbox" id="dec-brillitos" class="decoration-checkbox" /><label for="dec-brillitos">Sparkles</label></li>
+              <li class="checkbox-item"><input type="checkbox" id="dec-cintas" class="decoration-checkbox" /><label for="dec-cintas">Decorative ribbons</label></li>
+            </ul>
+          </div>
+          <div class="selector">
+            <label>Add-ons</label>
+            <ul class="checkbox-list">
+              <li class="checkbox-item"><input type="checkbox" id="add-girasoles" class="additional-checkbox" /><label for="add-girasoles">Sunflowers</label></li>
+              <li class="checkbox-item"><input type="checkbox" id="add-tulipanes" class="additional-checkbox" /><label for="add-tulipanes">Tulips</label></li>
+              <li class="checkbox-item">
+                <input type="checkbox" id="add-rosas" class="additional-checkbox" />
+                <label for="add-rosas">Extra roses</label>
+                <select id="extra-roses-quantity" style="width:120px; margin-left:10px; padding:8px; border-radius:12px; border:1px solid #ddd; display:none;">
+                  <option value="3">3 roses</option>
+                  <option value="4">4 roses</option>
+                  <option value="5">5 roses</option>
+                  <option value="6">6 roses</option>
+                </select>
+              </li>
+              <li class="checkbox-item"><input type="checkbox" id="add-eucalipto" class="additional-checkbox" /><label for="add-eucalipto">Eucalyptus</label></li>
+            </ul>
+          </div>
+          <a class="btn-order" href="#">Add to cart</a>
+        </div>
+        <aside class="sidebar">
+          <h2>Image carousel</h2>
+          <div class="carousel">
+            <img id="mainImage" src="Images/Arreglo 1.png" alt="Flower arrangement" />
+          </div>
+          <div class="thumbnails">
+            <img class="thumbnail active" src="Images/Arreglo 1.png" alt="Arrangement 1" data-src="Images/Arreglo 1.png" />
+            <img class="thumbnail" src="Images/Arreglo 2.png" alt="Arrangement 2" data-src="Images/Arreglo 2.png" />
+            <img class="thumbnail" src="Images/Arreglo 3.png" alt="Arrangement 3" data-src="Images/Arreglo 3.png" />
+            <img class="thumbnail" src="Images/Arreglo 4.png" alt="Arrangement 4" data-src="Images/Arreglo 4.png" />
+            <img class="thumbnail" src="Images/Arreglo 5.png" alt="Arrangement 5" data-src="Images/Arreglo 5.png" />
+          </div>
+          <ul class="list-group" style="margin-top:24px;">
+            <li><strong>Available decorations</strong></li>
+            <li>Butterflies, sparkly details, sparkles, ribbons.</li>
+            <li><strong>Add-ons</strong></li>
+            <li>Sunflowers, tulips, extra roses, eucalyptus.</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+    <script>
+      const thumbnails = document.querySelectorAll('.thumbnail');
+      const mainImage = document.getElementById('mainImage');
+      thumbnails.forEach((thumb) => {
+        thumb.addEventListener('click', () => {
+          thumbnails.forEach((item) => item.classList.remove('active'));
+          thumb.classList.add('active');
+          mainImage.src = thumb.dataset.src;
+        });
+      });
+
+      const phraseSelect = document.getElementById('phrase-select');
+      const customPhraseContainer = document.getElementById('customPhraseContainer');
+      phraseSelect.addEventListener('change', () => {
+        if (phraseSelect.value === 'custom-message') {
+          customPhraseContainer.style.display = 'block';
+        } else {
+          customPhraseContainer.style.display = 'none';
+        }
+      });
+
+      const decorationCheckboxes = document.querySelectorAll('.decoration-checkbox');
+      decorationCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', () => {
+          const selected = Array.from(decorationCheckboxes).filter((box) => box.checked);
+          if (selected.length > 2) {
+            checkbox.checked = false;
+            alert('You can select a maximum of 2 decorations.');
+          }
+        });
+      });
+
+      const additionalCheckboxes = document.querySelectorAll('.additional-checkbox');
+      const rosesExtraCheckbox = document.getElementById('add-rosas');
+      const extraRosesQuantity = document.getElementById('extra-roses-quantity');
+
+      additionalCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', () => {
+          const selected = Array.from(additionalCheckboxes).filter((box) => box.checked);
+          if (selected.length > 2) {
+            checkbox.checked = false;
+            alert('You can select a maximum of 2 add-ons.');
+          }
+        });
+      });
+
+      rosesExtraCheckbox.addEventListener('change', () => {
+        extraRosesQuantity.style.display = rosesExtraCheckbox.checked ? 'inline-block' : 'none';
+      });
+    </script>
+  </body>
+</html>
